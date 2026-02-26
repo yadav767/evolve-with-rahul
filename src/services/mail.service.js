@@ -17,71 +17,71 @@ const sendEmail = async (to, subject, text, html) => {
     }
 };
 
-async function sendEmailToUser(formData) {
-    const to = formData.email
-    const subject = "Welcome to Evolve With Rahul ";
-    const text = `
-    Welcome to Evolve With Rahul!
+// async function sendEmailToUser(formData) {
+//     const to = formData.email
+//     const subject = "Welcome to Evolve With Rahul ";
+//     const text = `
+//     Welcome to Evolve With Rahul!
 
-    Dear ${formData.fullName},
+//     Dear ${formData.fullName},
 
-    Thank you for registering with Evolve With Rahul.
+//     Thank you for registering with Evolve With Rahul.
 
-    We are happy to have you in our yoga family.
-    Our team will contact you soon regarding your selected plan.
+//     We are happy to have you in our yoga family.
+//     Our team will contact you soon regarding your selected plan.
 
-    Stay Healthy, Stay Calm 
+//     Stay Healthy, Stay Calm 
 
-    Regards,
-    Evolve With Rahul Team
-`;
-    const html = `
-<div style="font-family: Arial, sans-serif; background:#f4f8f7; padding:30px;">
+//     Regards,
+//     Evolve With Rahul Team
+// `;
+//     const html = `
+// <div style="font-family: Arial, sans-serif; background:#f4f8f7; padding:30px;">
   
-  <div style="max-width:600px; margin:auto; background:white; border-radius:10px; padding:30px;">
+//   <div style="max-width:600px; margin:auto; background:white; border-radius:10px; padding:30px;">
     
-    <h1 style="color:#2c7a7b; text-align:center;">
-       Evolve With Rahul
-    </h1>
+//     <h1 style="color:#2c7a7b; text-align:center;">
+//        Evolve With Rahul
+//     </h1>
 
-    <h2 style="color:#333;">
-      Welcome ${formData.fullName}!
-    </h2>
+//     <h2 style="color:#333;">
+//       Welcome ${formData.fullName}!
+//     </h2>
 
-    <p style="font-size:16px; color:#555; line-height:1.6;">
-      Thank you for registering with <b>Evolve With Rahul</b>.
-      <br/><br/>
-      We are very happy to have you in our yoga community.
-    </p>
+//     <p style="font-size:16px; color:#555; line-height:1.6;">
+//       Thank you for registering with <b>Evolve With Rahul</b>.
+//       <br/><br/>
+//       We are very happy to have you in our yoga community.
+//     </p>
 
-    <div style="background:#e6fffa; padding:15px; border-radius:8px; margin:20px 0;">
-      <p style="margin:5px 0;"><b>Selected Plan:</b> ${formData.plan}</p>
-      <p style="margin:5px 0;"><b>Email:</b> ${formData.email}</p>
-    </div>
+//     <div style="background:#e6fffa; padding:15px; border-radius:8px; margin:20px 0;">
+//       <p style="margin:5px 0;"><b>Selected Plan:</b> ${formData.plan}</p>
+//       <p style="margin:5px 0;"><b>Email:</b> ${formData.email}</p>
+//     </div>
 
-    <p style="font-size:16px; color:#555;">
-      Our instructor will contact you soon with further details.
-    </p>
+//     <p style="font-size:16px; color:#555;">
+//       Our instructor will contact you soon with further details.
+//     </p>
 
-    <hr style="margin:25px 0;"/>
+//     <hr style="margin:25px 0;"/>
 
-    <p style="text-align:center; color:#2c7a7b; font-weight:bold;">
-      Stay Healthy • Stay Positive • Stay Strong
-    </p>
+//     <p style="text-align:center; color:#2c7a7b; font-weight:bold;">
+//       Stay Healthy • Stay Positive • Stay Strong
+//     </p>
 
-    <p style="text-align:center; font-size:14px; color:#777;">
-      © 2026 Evolve With Rahul
-    </p>
+//     <p style="text-align:center; font-size:14px; color:#777;">
+//       © 2026 Evolve With Rahul
+//     </p>
 
-  </div>
-</div>
-`;
+//   </div>
+// </div>
+// `;
 
-    await sendEmail(to, subject, text, html)
-}
+//     await sendEmail(to, subject, text, html)
+// }
 
 async function sendEmailToInstructor(formData) {
-    const to = "yyadavrrahul@gmail.com"
+    const to = "yyadavaayush767@gmail.com"
     const subject = " New Yoga Registration";
     const text = `
         New Yoga Registration Received
