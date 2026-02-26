@@ -10,7 +10,7 @@ const path = require("path")
 app.use(cookieParser())
 app.use(express.json())
 app.use(cors({
-    origin: "https://evolve-with-rahul01.vercel.app", // your React app URL (Vite default)
+    origin: "*", // your React app URL (Vite default)
     credentials: true // required for cookies to work
 }))
 
