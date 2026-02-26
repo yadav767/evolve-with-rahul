@@ -31,7 +31,7 @@ const sendEmail = async (to, subject, text, html) => {
 };
 
 
-function sendEmailToUser(formData) {
+async function sendEmailToUser(formData) {
     const to = formData.email
     const subject = "Welcome to Evolve With Rahul ";
     const text = `
@@ -91,11 +91,11 @@ function sendEmailToUser(formData) {
 </div>
 `;
 
-    sendEmail(to, subject, text, html)
+    await sendEmail(to, subject, text, html)
 
 }
 
-function sendEmailToInstructor(formData) {
+async function sendEmailToInstructor(formData) {
     const to = "yyadavrrahul@gmail.com"
     const subject = " New Yoga Registration";
     const text = `
@@ -159,7 +159,7 @@ function sendEmailToInstructor(formData) {
   </div>
 </div>
 `;
-    sendEmail(to, subject, text, html)
+    await sendEmail(to, subject, text, html)
 
 }
 
