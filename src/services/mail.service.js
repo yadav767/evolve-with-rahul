@@ -85,4 +85,4 @@ async function sendEmailToInstructor(formData) {
     await sendEmail(to, subject, text, html)
 }
 
-module.exports = { sendEmailToUser, sendEmailToInstructor };
+module.exports = { sendEmailToInstructor };
