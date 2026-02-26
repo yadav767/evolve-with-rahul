@@ -8,13 +8,15 @@ async function submitFormController(req, res) {
             fullName, email, phoneNumber, message, plan
         })
 
+        
+        await sendEmailToInstructor(newUser)
+        await sendEmailToUser(newUser)
+
         res.status(200).json({
             message: "Mail send successfully !",
             status: true,
             newUser
         })
-        await sendEmailToInstructor(newUser)
-        await sendEmailToUser(newUser)
     } catch (error) {
         res.status(500).json({
             satus: false,
