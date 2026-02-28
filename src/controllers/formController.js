@@ -1,5 +1,5 @@
 const formModel = require("../models/form.model")
-const { sendEmailToUser, sendEmailToInstructor } = require("../services/mail.service")
+const { sendWelcomeEmailToUser, sendEmailToInstructor } = require("../services/mail.service")
 
 async function submitFormController(req, res) {
     const { fullName, email, phoneNumber, message, plan } = req.body
@@ -8,11 +8,12 @@ async function submitFormController(req, res) {
             fullName, email, phoneNumber, message, plan
         })
 
-        
+        console.log(newUser);
         await sendEmailToInstructor(newUser)
+        await sendWelcomeEmailToUser(newUser)
 
         res.status(200).json({
-            message: "Mail send successfully !",
+            message: "Registration's successfully submited !",
             status: true,
             newUser
         })

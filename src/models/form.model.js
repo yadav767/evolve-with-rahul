@@ -13,7 +13,6 @@ const formSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please provide email address !"],
         trim: true,
-        unique: true,
         lowercase: true,
         match: [
             /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
